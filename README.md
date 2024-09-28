@@ -45,15 +45,28 @@ The Legislative Data App is a Django application that allows users to access leg
 
 ## Directory Structure
 legislative-data-app/
-
 ├── manage.py
-
 ├── legislators/
-
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── views.py
+│   ├── urls.py
+│   ├── management/
+│   │   ├── __init__.py
+│   │   └── commands/
+│   │       ├── __init__.py
+│   │       └── import_data.py
+│   ├── migrations/
+│   │   └── __init__.py
 ├── templates/
-
+│   └── legislators.html
 ├── data/
-
+│   ├── bills.csv
+│   ├── legislators.csv
+│   ├── votes.csv
+│   └── vote_results.csv
 └── venv/
 
 ## Data Sources
