@@ -58,12 +58,12 @@
                 </tr>
             </thead>
             <tbody>
-                {% for legislator_id, stats in legislator_stats.items %}
+                {% for legislator in legislator_stats %}
                 <tr>
-                    <td>{{ legislator_id }}</td>
-                    <td>{{ stats.name }}</td>
-                    <td>{{ stats.supported }}</td>
-                    <td>{{ stats.opposed }}</td>
+                    <td>{{ legislator.id }}</td>
+                    <td>{{ legislator.name }}</td>
+                    <td>{{ legislator.supported }}</td>
+                    <td>{{ legislator.opposed }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
@@ -75,19 +75,19 @@
                 <tr>
                     <th>Bill ID</th>
                     <th>Title</th>
+                    <th>Primary Sponsor</th>
                     <th>Supporters</th>
                     <th>Opposers</th>
-                    <th>Primary Sponsor</th>
                 </tr>
             </thead>
             <tbody>
-                {% for bill_id, stats in bill_stats.items %}
+                {% for bill in bill_stats %}
                 <tr>
-                    <td>{{ bill_id }}</td>
-                    <td>{{ stats.title }}</td>
-                    <td>{{ stats.supporters }}</td>
-                    <td>{{ stats.opposers }}</td>
-                    <td>{{ stats.primary_sponsor }}</td>
+                    <td>{{ bill.id }}</td>
+                    <td>{{ bill.title }}</td>
+                    <td>{{ bill.sponsor__name }}</td>
+                    <td>{{ bill.supporters }}</td>
+                    <td>{{ bill.opposers }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
