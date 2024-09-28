@@ -45,29 +45,29 @@ The Legislative Data App is a Django application that allows users to access leg
 
 ## Directory Structure
 legislative-data-app/
-├── manage.py
-├── legislators/
-│   ├── __init__.py
-│   ├── admin.py
-│   ├── apps.py
-│   ├── models.py
-│   ├── views.py
-│   ├── urls.py
-│   ├── management/
-│   │   ├── __init__.py
-│   │   └── commands/
-│   │       ├── __init__.py
-│   │       └── import_data.py
-│   ├── migrations/
-│   │   └── __init__.py
-├── templates/
-│   └── legislators.html
-├── data/
-│   ├── bills.csv
-│   ├── legislators.csv
-│   ├── votes.csv
-│   └── vote_results.csv
-└── venv/
+├── manage.py                 # Main script for Django commands
+├── legislators/             # App directory for legislators functionality
+│   ├── __init__.py           # Empty file to mark the directory as a package
+│   ├── admin.py              # Admin interface configuration (optional)
+│   ├── apps.py               # App configuration file (optional)
+│   ├── models.py             # Models defining database structure
+│   ├── views.py              # Functions handling user requests
+│   ├── urls.py               # URL routing for the app
+│   ├── management/           # Directory for custom management commands
+│   │   ├── __init__.py       # Empty file to mark the directory as a package
+│   │   └── commands/         # Subdirectory for custom management commands
+│   │       ├── __init__.py   # Empty file to mark the directory as a package
+│   │       └── import_data.py # Script for importing CSV data (optional)
+│   ├── migrations/           # Directory containing database migrations
+│   │   └── __init__.py       # Empty file to mark the directory as a package
+├── templates/               # Directory for HTML templates
+│   └── legislators.html      # Template for displaying legislator information
+├── data/                     # Directory for CSV data files
+│   ├── bills.csv              # CSV file containing bill data
+│   ├── legislators.csv        # CSV file containing legislator data
+│   ├── votes.csv              # CSV file mapping votes to bills
+│   └── vote_results.csv       # CSV file containing vote results
+└── venv/                      # Virtual environment directory (created earlier)
 
 ## Data Sources
 - bills.csv: Contains information about bills (id, title, sponsor_id).
